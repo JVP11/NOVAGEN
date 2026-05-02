@@ -1,0 +1,12 @@
+# Local Flutter SDK clone (Render build script / CI)
+.flutter-sdk/
+
+# IDE / OS
+.cursor/
+*.zip
+.DS_Store
+
+# Secrets
+**/local.properties
+.env
+.env.*

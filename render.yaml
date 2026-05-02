@@ -1,0 +1,17 @@
+# Render Blueprint: static Flutter web app
+# https://render.com/docs/blueprint-spec
+#
+# After connecting this repo, Render runs buildCommand and publishes build/web.
+# If your Git root is only the Flutter project (pubspec at repo root), change:
+#   buildCommand to: bash scripts/render_build.sh  (and edit script APP_DIR to ROOT)
+#   staticPublishPath to: build/web
+
+services:
+  - type: web
+    name: novagen-safeink-scanner
+    runtime: static
+    buildCommand: bash scripts/render_build.sh
+    staticPublishPath: files(1)/build/web
+    # Optional: custom domain in Render dashboard → Settings → Custom Domain
+    # Flutter web default URL strategy uses hash routes (/#/...) so deep-link
+    # refresh works without SPA rewrites.
