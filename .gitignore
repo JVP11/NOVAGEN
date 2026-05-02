@@ -4,6 +4,7 @@
 # IDE / OS
 .cursor/
 *.zip
+files(1).zip
 .DS_Store
 
 # Secrets
