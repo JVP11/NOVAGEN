@@ -1,6 +1,7 @@
 FROM ubuntu:24.04 AS builder
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TAR_OPTIONS=--no-same-owner
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
@@ -21,6 +22,7 @@ COPY files(1) /app/files(1)
 WORKDIR /app/files(1)
 RUN flutter --version && \
     flutter config --no-analytics --enable-web && \
+    flutter precache --web && \
     flutter pub get && \
     flutter build web --release
 
