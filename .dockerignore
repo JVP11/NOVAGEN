@@ -1,0 +1,10 @@
+.git
+.cursor
+.flutter-sdk
+**/.dart_tool
+**/build
+**/.pub-cache
+**/.idea
+**/.vscode
+**/.DS_Store
+files(1).zip
